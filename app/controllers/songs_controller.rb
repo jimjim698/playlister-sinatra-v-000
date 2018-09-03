@@ -29,7 +29,7 @@ end
 end
 
 get '/songs/:slug/edit' do
-  raise params.inspect
+  binding.pry
   @song = Song.find_by_slug(params[:slug])
   erb :'songs/edit'
 end
