@@ -29,6 +29,7 @@ end
 end
 
 get '/songs/:slug/edit' do
+  raise params.inspect
   @song = Song.find_by_slug(params[:slug])
   erb :'songs/edit'
 end
